@@ -7,6 +7,12 @@ driver = webdriver.Edge()
 try:
  #login
     driver.get("https://www.saucedemo.com/")
+
+    #Título de la página
+    titulo = driver.find_element(By.TAG_NAME,"title")
+    assert titulo == "Swag Labs", "{titulo} no es el titulo correcto"
+    
+    #Login
     driver.find_element(By.ID, "user-name").send_keys("standard_user")
     driver.find_element(By.ID, "password").send_keys("secret_sauce")
     driver.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
