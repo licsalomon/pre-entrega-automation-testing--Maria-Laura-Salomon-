@@ -1,7 +1,3 @@
-from selenium.webdriver.common.by import By
-from selenium import webdriver
-import conftest
-import pytest
 
 def test_login_validation(login_in_driver):
     try:
